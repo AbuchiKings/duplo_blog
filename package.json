@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsnd --respawn --transpile-only --exit-child src/server.ts"
+    "test": "tap --node-arg=--require=ts-node/register",
+    "dev": "tsnd --respawn --transpile-only --exit-child src/server.ts",
+    "start": "node ./dist/server.js",
+    "build": "tsc --build"
   },
   "keywords": [],
   "author": "",
